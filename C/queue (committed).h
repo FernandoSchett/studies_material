@@ -1,5 +1,6 @@
 // This is a library that works with MAX 99 elements capacity queues. 
 // Made by: Fernando Schettini Github: https://github.com/FernandoSchett
+// Queues here  are "FIFO" (First IN, First OUT)
 
 #ifndef QUEUE_H   
 #define QUEUE_H   //indicates QUEUE_H library start
