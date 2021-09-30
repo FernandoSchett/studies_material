@@ -76,7 +76,6 @@ int queue_remove(tp_queue *f, tp_item *e){
 void print_queue(tp_queue f){ 
 
     tp_item e;
-    printf("Queue:\n");
     while(!empty_queue(&f)){
         queue_remove(&f, &e);
         printf(" %d", e);
@@ -95,9 +94,9 @@ void fill_queue(tp_queue *f, int *number){ //this function will receive the queu
 	printf("Type the values: (Max numbers values: MAX)\n");
 	cont = 0;
 	while(cont < *number){
+		printf("Type the element:");
 		scanf(" %d", &value);
-		queue_insert(*f, value);
-		printf("Type the next element:");
+		queue_insert(f, value);
 		cont++;
 	}
 }

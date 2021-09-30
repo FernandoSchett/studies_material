@@ -8,10 +8,17 @@
 
 
 void reverse_queue(tp_queue *Q1){ //this fucntion is gonna reverse the order of the queue values.
-	
-	
-
-	
+	tp_item element;
+	tp_stack saux;
+	start_stack(&saux);
+	while(!empty_queue(Q1)){
+		queue_remove(Q1, &element);
+		push(&saux, element);
+	}
+	while(!empty_stack(&saux)){
+		pop(&saux, &element);
+		queue_insert(Q1, element);
+	}	
 }
 
 int main(){
@@ -23,6 +30,6 @@ int main(){
 	fill_queue(&Q1, &number);
 	reverse_queue(&Q1);
 	printf("Reversed Queue:\n");
-	print_queue(&Q1);
+	print_queue(Q1);
 	return 0;
 }
