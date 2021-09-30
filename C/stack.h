@@ -54,8 +54,8 @@ int pop(tp_stack *s, tp_item *e){
     return 1;
 }
 
-int top(tp_stack *p, tp_item *e){ 
-    if (empty_stack(s){
+int top(tp_stack *s, tp_item *e){ 
+    if (empty_stack(s)){
 		return 0; 
 	}
 	*e = s-> item[s->top];
@@ -77,7 +77,7 @@ int stack_high(tp_stack *s){
 }
 
 void remove_odds(tp_stack *s){  
-    tp_pilha saux; 
+    tp_stack saux; 
     start_stack(&saux);
     tp_item e;
     
@@ -129,6 +129,7 @@ int same_stack(tp_stack stack1, tp_stack stack2){
 
 int stack_stack (tp_stack *stack1, tp_stack *stack2){ 
     tp_item e;
+    tp_stack saux;
     start_stack(&saux);
     if (stack_high(stack1) + stack_high(stack2) > MAX){
         return 0; 
