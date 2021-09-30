@@ -76,6 +76,7 @@ int queue_remove(tp_queue *f, tp_item *e){ //Function that receives a queue and 
     
 }
 
+// You need to creat an copy from the orignal queue, to keep it originality.
 void queue_printer(tp_queue f){ //Function that receives a queue and print all elements.
 
     tp_item e;
