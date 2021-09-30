@@ -1,3 +1,11 @@
+// Made by: Fernando Schettini Github: https://github.com/FernandoSchett
+//This is a program made for pallet logistics
+// In the end, all pallets have to be on X place
+// Z can only have 6T pallets
+// Y can only have 4T pallets
+// X cant have heavier pallets on top of lighter pallets 
+// we only have 9T,6T,4T, pallets
+
 #include <stdio.h>
 #include "stack.h"
 #include "queue.h"
