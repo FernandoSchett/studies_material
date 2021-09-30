@@ -3,7 +3,7 @@
 // This program is gonna receive values, put then in a queue and then print it 
 // with the values in their reverse order.
 #include <stdio.h>
-#include "pilha.h"
+#include "stack.h"
 #include "queue.h"
 
 
