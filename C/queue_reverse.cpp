@@ -7,7 +7,7 @@
 #include "queue.h"
 
 
-void reverse_queue(){ //this fucntion is gonna reverse the order of the queue values.
+void reverse_queue(tp_queue *Q1){ //this fucntion is gonna reverse the order of the queue values.
 	
 	
 

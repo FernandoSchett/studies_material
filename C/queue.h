@@ -23,7 +23,7 @@ void start_queue(tp_queue *f){
 
 int empty_queue(tp_queue *f){ 
 	
-    if(f -> start == f-> fim){
+    if(f -> start == f-> end){
 		return 1; 
 	}
     return 0; 
@@ -66,7 +66,7 @@ int queue_remove(tp_queue *f, tp_item *e){
     if(empty_queue(f)){
 		return 0; 
 	}	
-    f -> start = proximo(f->start);
+    f -> start = next(f->start);
     *e = f -> item[f->start];
     f -> size--;
     return 1; 
@@ -93,7 +93,7 @@ int queue_size(tp_queue *f){
 void fill_queue(tp_queue *Q1, int *number){ //this function will receive the queue, then fill it then fill it with "number" elements.
 	int cont, value;
 	printf("Type the values: (Max numbers values: MAX)\n");
-	while(cont < number){
+	while(cont < *number){
 		scanf(" %d", &value);	
 	}
 }
