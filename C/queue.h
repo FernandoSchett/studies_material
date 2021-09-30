@@ -90,11 +90,15 @@ int queue_size(tp_queue *f){
     
 }
 
-void fill_queue(tp_queue *Q1, int *number){ //this function will receive the queue, then fill it then fill it with "number" elements.
+void fill_queue(tp_queue *f, int *number){ //this function will receive the queue, then fill it then fill it with "number" elements.
 	int cont, value;
 	printf("Type the values: (Max numbers values: MAX)\n");
+	cont = 0;
 	while(cont < *number){
-		scanf(" %d", &value);	
+		scanf(" %d", &value);
+		queue_insert(*f, value);
+		printf("Type the next element:");
+		cont++;
 	}
 }
 

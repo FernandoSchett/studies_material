@@ -23,6 +23,6 @@ int main(){
 	fill_queue(&Q1, &number);
 	reverse_queue(&Q1);
 	printf("Reversed Queue:\n");
-//	print_queue(&Q1);
+	print_queue(&Q1);
 	return 0;
 }
