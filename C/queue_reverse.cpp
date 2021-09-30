@@ -16,13 +16,13 @@ void reverse_queue(tp_queue *Q1){ //this fucntion is gonna reverse the order of 
 
 int main(){
 	int number;
-	tp_queue Q1; 
+	tp_queue f; 
 	printf("How many values do you wanna put in the queue?\n");
 	scanf(" %d", &number);
-	start_queue(&Q1);
-	fill_queue(&Q1, &number);
-	reverse_queue(&Q1);
+	start_queue(&f);
+	fill_queue(&f, &number);
+	reverse_queue(&f);
 	printf("Reversed Queue:\n");
-	print_queue(&Q1);
+	print_queue(&f);
 	return 0;
 }
