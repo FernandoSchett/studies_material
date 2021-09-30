@@ -22,7 +22,7 @@ int main(){
 			}
 		}else{ //odd
 			if(empty_queue(&Q1)){
-				printf("The queue is empty.");
+				printf("The queue is empty.\n");
 			}
 			else{
 				queue_remove(&Q1, &element);	
@@ -30,7 +30,7 @@ int main(){
 		}
 		cont++;
 	}
-	printf("New Queue");
+	printf("New Queue:\n");
 	print_queue(Q1);
 	return 0;
 }
