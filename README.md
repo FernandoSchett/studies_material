@@ -1,2 +1,2 @@
 # Exercises
-# Some programming exercises made in C language.
+# Some programming exercises, my brain smoll it need to get big
