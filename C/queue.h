@@ -14,7 +14,7 @@ typedef struct{
     int size;					
 } tp_queue;		
 
-void queue_starter(tp_queue *f){ 
+void start_queue(tp_queue *f){ 
 	
     f -> start = f -> end = MAX-1;
     f -> size = 0;
@@ -73,9 +73,10 @@ int queue_remove(tp_queue *f, tp_item *e){
     
 }
 
-void queue_printer(tp_queue f){ 
+void print_queue(tp_queue f){ 
 
     tp_item e;
+    printf("Queue:\n");
     while(!empty_queue(&f)){
         queue_remove(&f, &e);
         printf(" %d", e);
@@ -89,6 +90,13 @@ int queue_size(tp_queue *f){
     
 }
 
+void fill_queue(tp_queue *Q1, int *number){ //this function will receive the queue, then fill it then fill it with "number" elements.
+	int cont, value;
+	printf("Type the values: (Max numbers values: MAX)\n");
+	while(cont < number){
+		scanf(" %d", &value);	
+	}
+}
 
 #endif 
 
