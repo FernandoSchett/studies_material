@@ -2,7 +2,7 @@
 // Made by: Fernando Schettini Github: https://github.com/FernandoSchett
 
 #ifndef QUEUE_H   
-#define QUEUE_H   //indicates QUEUE_H function start
+#define QUEUE_H   //indicates QUEUE_H library start
 
 #include <stdio.h> //added stdio.h library.
 #define MAX 100 // every time "MAX" appears, compilator will read "100".
@@ -92,5 +92,5 @@ int queue_size(tp_queue *f){ //Function that receives a queue, and return its si
 }
 
 
-#endif // indicates QUEUE_H function end
+#endif // indicates QUEUE_H library ends
 
