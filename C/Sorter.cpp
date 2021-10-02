@@ -1,4 +1,4 @@
-/*This is a program that will receive a lista of elements, then chossen randomly one of then. Chances are the same.
+/*This is a program that will receive a lista of elements, then chossen randomly one of then. Chances are the same for eaach element recieve.
 Fernando Schettini (o mais foda) Github:https://github.com/FernandoSchett */
 
 #include <stdio.h>
