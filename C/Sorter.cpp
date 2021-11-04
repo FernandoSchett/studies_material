@@ -9,44 +9,43 @@ Fernando Schettini (o mais foda) Github:https://github.com/FernandoSchett */
 
 int sorter(int *possb){
 	int random, nrandom, choosen;
-	long double	chance;
+	float	chance;
 	
 	srand(time (NULL)); //Generate seed for rand(),based in your pc time.
-	//printf("%d\n", *possb);
+	printf("possibility: %d\n", *possb);
 	random = (rand() % 100); //Generate random number in range 1-100.
-	//printf("random: %d\n", random);
-	chance =  100 / *possb; //chance of getting any number.
-	//printf("chance: %lf \n", chance);
-	
+	printf("random: %d\n", random);
+	chance =  100 /(float)*possb; //chance of getting any number.
+	printf("chance: %f \n", chance);
 	
 	nrandom = 0;
 	choosen = 0;
-	
-	
+				
 	while(nrandom < random){ //Look for the range.
 		nrandom = nrandom  + chance;
 		//printf("choosen: %d\n", choosen);
 		//printf("nrandom: %d\n", nrandom);
-		choosen ++;	
+		choosen ++; 	
 	}
 	//printf("choosen: %d\n", choosen);
 	return choosen;
 }
 
-
 int main (){
+	
 	char element[100], celement[100];
-	int possibility, choosen;
+	int possibility, choosen,cont;
 	printf("Hi! Im the number sorter, how many elements do you wanna sort?\n");
 	scanf(" %d", &possibility);
 	choosen = sorter(&possibility);
-	
-	while(possibility > 0){		//Scan all elements then, stores the choosen one based on integer receive from sorter();
-		scanf(" %[^n]s", element);
-		if(possibility == choosen){
+	printf("Type %d elements:\n", possibility);
+	cont = 0;
+	while(cont != possibility){		//Scan all elements then, stores the choosen one based on integer receive from sorter();
+		scanf(" %[^\n]s", element);
+		if(cont == choosen){
 			strcpy(celement, element);
 		}
-		possibility --;
+		cont ++;
 	}
 	
 	printf("Choosen element: %s\n", celement);
