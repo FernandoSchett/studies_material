@@ -9,7 +9,7 @@ Fernando Schettini (o mais foda) Github:https://github.com/FernandoSchett */
 
 int sorter(int *possb){
 	int random, nrandom, choosen;
-	float	chance;
+	float chance;
 	
 	srand(time (NULL)); //Generate seed for rand(),based in your pc time.
 	printf("possibility: %d\n", *possb);
