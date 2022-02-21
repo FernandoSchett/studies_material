@@ -30,4 +30,18 @@ int alterar_no_final(FILE *arq, char nomearq[]){
 	fclose(arq);
 	return 1;
 }
+
+int ler(FILE *arq, char nomearq[]){
+	char registro[50];
+	arq = fopen(nomearq, "r");
+	if(!arq){
+		return 0;
+	}
+	while(fgets(registro,sizeof(registro), arq)){
+		printf("%s",registro);
+		fclose(arq);
+		return 1;	
+	}
+
+}
 #endif
