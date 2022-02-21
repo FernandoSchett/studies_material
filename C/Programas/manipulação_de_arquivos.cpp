@@ -16,10 +16,12 @@ int main(){
 	printf("Digite o nome do arquivo: ");
 	gets(nomearq); //scanf("%[^\n]s", nomearq);
 	switch(opcao){
-		case 1: gravar(arq,nomearq);
+		case '1': gravar(arq,nomearq);
 				break;
-		case 2: alterar_no_final(arq, nomearq);
-				break;		
+		case '2': alterar_no_final(arq, nomearq);
+				break;	
+		case '3': ler(arq, nomearq);
+				break;	
 	}
 	
 	return  0;
