@@ -51,7 +51,7 @@ int ler_formatado(FILE *arq, char nomearq[]){
 	if(!arq){
 		return 0;
 	}
-	while(fscanf(arq, "%f %f %f", &nota1, &nota2, &nota3)){
+	while(fscanf(arq, "%f %f %f", &nota1, &nota2, &nota3) != EOF){
 		printf("Nota 1: %f, Nota 2: %f, Nota 3: %f \n", nota1, nota2, nota3);
 	}
 	fclose(arq);
