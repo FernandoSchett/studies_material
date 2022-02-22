@@ -4,7 +4,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <locale.h>
-
+//while(!feof(arq)){}
 int gravar(FILE *arq, char nomearq[]){
 	char mensagem[50];
 	arq=fopen(nomearq, "w");
