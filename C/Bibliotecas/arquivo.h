@@ -5,6 +5,8 @@
 #include <string.h>
 #include <locale.h>
 //while(!feof(arq)){}
+
+
 int gravar(FILE *arq, char nomearq[]){
 	char mensagem[50];
 	arq=fopen(nomearq, "w");
@@ -44,10 +46,10 @@ int ler(FILE *arq, char nomearq[]){
 	return 1;	
 }
 
-
-int ler_formatado(FILE *arq, char nomearq[]){
-	float nota1, nota2, nota3;
-	arq = fopen(nomearq, "r");
+                                                                // notas.txt
+int ler_formatado(FILE *arq, char nomearq[]){                   // 1,0 2,0 3,0
+	float nota1, nota2, nota3;                                  // 4,5 9,0 12,0 
+	arq = fopen(nomearq, "r");                                  // 5,2 4,6 8,4
 	if(!arq){
 		return 0;
 	}
@@ -57,6 +59,37 @@ int ler_formatado(FILE *arq, char nomearq[]){
 	fclose(arq);
 	return 1;
 }
+
+int ler_alterar_geral(FILE *arq, char nomearq[]){
+	float nota[3][3];
+	char registro[20];
+	arq = fopen(nomearq, "r+");
+	int i = 0;
+	
+	if(!arq){
+		return 0;
+	}
+	
+	while(fscanf(arq, "%f %f %f", &nota[i][0], &nota[i][1], &nota[i][2]) != EOF){
+		printf("Aluno: %d \n", i+1);
+		printf("Nota 1 atual: %.1f   Insira nova nota:\n", nota[i][0]);
+		scanf( " %f", &nota[i][0]);
+		printf("Nota 2 atual: %.1f   Insira nova nota:\n", nota[i][1]);
+		scanf( " %f", &nota[i][1]);
+		printf("Nota 3 atual: %.1f   Insira nova nota:\n", nota[i][2]);
+		scanf( " %f", &nota[i][2]);
+		i++;
+	}
+	rewind(arq); //volta pro inicio
+	//fseek vai pro byte selecionado
+	//ftell: diz qual byte esta
+	for(i=0; i<3; i++){ // pode usar fprintf
+		sprintf(registro, "%.1f  %.1f  %.1f\n", nota[i][0], nota[i][1], nota[i][2]); //joga na string
+		fputs(registro, arq);
+	}
+}
+
+
 
 
 
