@@ -1,7 +1,7 @@
 Cardeneta de notas dos alunos 
 
-O aluno que apresenta o maior desempenho é Fernando_dos_Santos com media igual a 11,03
-O aluno que apresenta o menor desempenho é Orlando com media igual a 1,33
+O aluno que apresenta o maior desempenho Ã© ______ com media igual a 0.00         
+O aluno que apresenta o menor desempenho Ã© ______ com media igual a 0.00            
 				
 Nome do alunos			Nota1		Nota2		Nota3
 
@@ -10,4 +10,4 @@ Carlos			        7,4		6,5		6,6
 Joana				9,7		9,8	       10,9
 Andre				3,6		4,1             2,3
 Fernando_dos_Santos			12,0		10,0		11,1
-Orlando				2,0		1,0		1,0        
+Orlando				2,0		1,0		1,0
