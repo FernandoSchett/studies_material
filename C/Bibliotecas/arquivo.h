@@ -11,6 +11,7 @@ int gravar(FILE *arq, char nomearq[]){
 	char mensagem[50];
 	arq=fopen(nomearq, "w");
 	if (arq==NULL) return 0;
+	
 	printf("Digite mensagem 1 para gravar no arquivo: ");
 	fflush(stdin);
 	gets(mensagem);
@@ -19,6 +20,7 @@ int gravar(FILE *arq, char nomearq[]){
 	gets(mensagem);
 	fputs(mensagem,arq);
 	fclose(arq);
+	
 	return 1;
 }
 
