@@ -11,28 +11,38 @@
 
 ## About 🤔:
 
-## Summary 📝:
-
-## Results 📈:
-
 ## Resourses 🧑‍🔬:
 
 - 
-- 
 
+## Results 📈:
+
+<div align="center">
+	<a href="">
+	<img height = "250em" src = "" />
+    </a>
+</div>
+<h4 align="center">Figure 1 - <a href="https://www.ufba.br/">UFBA</a> Academic History 2022.2.</h4>
+
+<div align="center">
+	<a href="">
+	<img height = "250em" src = "" />
+    </a>
+</div>
+<h4 align="center">Figure 2 - <a href="https://www.senaicimatec.com.br/">SENAI CiMATEC Academic History</a> 2022.2.</h4>
 
 ## Dependencies 🚚:
 
 The project dependencies are described in a dependencies file within the repository. In summary, heres what you're gonna need in order to run the project:
 
-- 
+- none yet :p
 - 
 
 For installing dependencies more quickly, you can run the following command at terminal, inside the clonned repository:
 
     pip3 install -r ./dependencies/requirements.txt
 
-Make sure you have all Dependencies before running the project.
+Make sure you have the dependencies required before running the any codes in here.
 
 ## How to run codes fomr here 🏃:
 
@@ -44,7 +54,7 @@ First, clone this repository. In the top of each code file, has a manual with in
 	Purpose:        Code for hard problems         
 	Authors:        Fernando Antônio Marques Schettini   
 	Usage: 
-		HowToCompile:   gcc filne_name.cpp -o filne_name
+		HowToCompile:   gcc filne_name.cpp -o file_name
 		HowToExecute:   ./file_name           
 	*/ 
 
@@ -68,3 +78,7 @@ Feel free to create a new branch, fork the project, create a new Issue or make a
 ## References 📙:
 	
 none yet :p
+
+### Important Links 🔗:
+
+- https://choosealicense.com/
