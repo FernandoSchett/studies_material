@@ -7,6 +7,7 @@
 </div>
 
 ## Developed by 💻:
+
 - [Fernando Schettini](https://github.com/FernandoSchett).
 
 ## About 🤔:
@@ -92,6 +93,16 @@ Over time, I organized this repository based on my academic journey, starting fr
 ## How to contribute 🫂:
 
 Feel free to create a new branch, fork the project, create a new Issue or make a pull request contact one of us to develop at this studies repository. 
+
+
+## Special thanks to 🥰:
+
+I want to express my sincere gratitude for your invaluable guidance and support throughout my career. Your mentorship has been instrumental in my professional growth, and I am truly grateful for the knowledge and insights you have shared. Thank you for believing in me and helping me succeed.
+
+- [Murilo Boratto](https://github.com/muriloboratto), my internship supervisor at the supercomputer center at SENAI CIMATEC. Thank you for the market insight, project advice, and opportunities.
+- [Márcio Soussa](https://www.linkedin.com/in/marcio-soussa?originalSubdomain=br), my advisor in several subjects and in my student initiative,SENAI CIMATEC programming club. Your encouragement and far-reaching vision provided me with invaluable growth experiences.
+- [Murilo Plínio](https://www.linkedin.com/in/muriloplinio/), my course coordinator at SENAI CIMATEC, the opportunities and advice you gave me were essential in the development of my career.
+- [Edson Mota](https://github.com/edsonmottac), my PL3 teacher you were essential to my first development experiences, always willing to help.
 
 ## Licence 📜:
 
