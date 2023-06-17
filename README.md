@@ -11,9 +11,26 @@
 
 ## About 🤔:
 
+This is where I store all my study materials and references related to programming and engineering andcomputer science, with a primary focus on my college coursework. Here, you'll find a collection of resources that I've gathered and organized to aid my learning journey.
+
+This repository serves as a central hub for my educational materials, allowing me to access them conveniently whenever I need to review or expand my knowledge. From coding examples and project prototypes to insightful articles and tutorials, everything relevant to my studies can be found here.
+
+In addition to my study materials, I also maintain another [repository](https://github.com/FernandoSchett/hall_of_fame) that holds information about influential scientists and individuals whom I admire. It serves as a source of inspiration, allowing me to learn more about their work and contributions to the field of science and technology, do not forget to check it out :).
+
+Feel free to explore the contents of this repository and utilize any resources that may be helpful to you. Whether you're a fellow student, a programmer, or simply curious about the world of computer science, I hope you find value in the materials I've gathered.
+
+
 ## Resourses 🧑‍🔬:
 
-- 
+- Useful Links: A curated collection of links to websites, blogs, forums, and online resources related to programming and computer science. These links serve as valuable references and sources of information for various topics.
+
+- Libraries and Useful Functions: A directory containing different libraries and useful functions that you have gathered during your studies. These resources can assist in enhancing your coding productivity and solving common programming challenges.
+
+- Courses: A compilation of course materials, lecture notes, and assignments from your college coursework or online courses. This section provides a structured learning experience and allows you to revisit course content whenever needed.
+
+- Base Codes: A repository of foundational code snippets and templates that serve as starting points for your projects. These codes can help you kickstart your development process and provide a solid foundation for building more complex applications.
+
+- Articles, PDFs, and Useful Images: A collection of articles, research papers, PDF documents, and relevant images related to programming and computer science. These resources offer additional insights, in-depth explanations, and visual aids to enhance your understanding of various concepts and topics.
 
 ## Results 📈:
 
@@ -60,6 +77,7 @@ First, clone this repository. In the top of each code file, has a manual with in
 
 ## Development Process ⚙️:
 
+Over time, I organized this repository based on my academic journey, starting from my undergraduate studies. I categorized study materials as I progressed, adding useful links, libraries, functions, courses, base codes, and relevant articles. The structure was continually adjusted to reflect my progress and facilitate access to resources. This repository is a representation of my academic path and my commitment to continuous learning in programming, computer  engineering and computer science.
 
 ### Tools Used 🛠️: 
 
@@ -77,7 +95,7 @@ Feel free to create a new branch, fork the project, create a new Issue or make a
 
 ## References 📙:
 	
-none yet :p
+[1] none yet :p
 
 ### Important Links 🔗:
 
