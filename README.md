@@ -36,17 +36,17 @@ Feel free to explore the contents of this repository and utilize any resources t
 
 <div align="center">
 	<a href="">
-	<img height = "250em" src = "" />
+	<img height = "250em" src = "https://github.com/FernandoSchett/studies_material/assets/80331486/b519c13b-ff58-4f35-9a67-532aac8a6be1" />
     </a>
 </div>
 <h4 align="center">Figure 1 - <a href="https://www.ufba.br/">UFBA</a> Academic History 2022.2.</h4>
 
 <div align="center">
 	<a href="">
-	<img height = "250em" src = "" />
+	<img height = "250em" src = "https://github.com/FernandoSchett/studies_material/assets/80331486/ef7379ef-c51c-4947-b4a0-94985c682371" />
     </a>
 </div>
-<h4 align="center">Figure 2 - <a href="https://www.senaicimatec.com.br/">SENAI CiMATEC Academic History</a> 2022.2.</h4>
+<h4 align="center">Figure 2 - <a href="https://www.senaicimatec.com.br/">SENAI CiMATEC</a> Academic History 2022.2.</h4>
 
 ## Dependencies 🚚:
 
