@@ -34,6 +34,10 @@ Feel free to explore the contents of this repository and utilize any resources t
 
 ## Results 📈:
 
+- [Linkedin](https://www.linkedin.com/in/fernando-schettini/).
+- [Github](https://github.com/FernandoSchett).
+- [Lattes]().
+
 <div align="center">
 	<a href="">
 	<img height = "250em" src = "https://github.com/FernandoSchett/studies_material/assets/80331486/b519c13b-ff58-4f35-9a67-532aac8a6be1" />
