@@ -88,6 +88,8 @@ Over time, I organized this repository based on my academic journey, starting fr
 
 - [VScode](https://code.visualstudio.com/). 
 - [NetBeans](https://netbeans.apache.org/download/index.html).
+- [NASM](https://www.nasm.us/).
+- [GCC](https://gcc.gnu.org/).
 - [DevC++](https://www.bloodshed.net/).
 
 ## How to contribute 🫂:
