@@ -92,6 +92,10 @@ Over time, I organized this repository based on my academic journey, starting fr
 - [GCC](https://gcc.gnu.org/).
 - [DevC++](https://www.bloodshed.net/).
 
+For installing some tools more quickly, you can run the following command at terminal, inside the clonned repository:
+
+    sh ./dependencies/install_tools.sh
+
 ## How to contribute 🫂:
 
 Feel free to create a new branch, fork the project, create a new Issue or make a pull request contact one of us to develop at this studies repository. 
