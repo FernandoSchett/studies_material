@@ -122,5 +122,14 @@ All code done by **me** are in [Apache V2](https://choosealicense.com/licenses/a
 
 ### Important Links 🔗:
 
-- https://choosealicense.com/
+### Desing:
+
 - https://color.adobe.com/pt/create
+
+### O.S:
+
+- https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/
+
+### Desing:
+- https://choosealicense.com/
+
