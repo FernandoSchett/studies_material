@@ -12,6 +12,8 @@
 
 ## About 🤔:
 
+**A lot of material here isn't mine, do not use then without without permission from the original creators.**
+
 This is where I store all my study materials and references related to programming and engineering andcomputer science, with a primary focus on my college coursework. Here, you'll find a collection of resources that I've gathered and organized to aid my learning journey.
 
 This repository serves as a central hub for my educational materials, allowing me to access them conveniently whenever I need to review or expand my knowledge. From coding examples and project prototypes to insightful articles and tutorials, everything relevant to my studies can be found here.
@@ -51,7 +53,7 @@ Feel free to explore the contents of this repository and utilize any resources t
 	<img height = "250em" src = "https://github.com/FernandoSchett/studies_material/assets/80331486/ef7379ef-c51c-4947-b4a0-94985c682371" />
     </a>
 </div>
-<h4 align="center">Figure 2 - <a href="https://www.senaicimatec.com.br/">SENAI CiMATEC</a> Academic History 2022.2.</h4>
+<h4 align="center">Figure 2 - <a href="https://www.senaicimatec.com.br/">SENAI CIMATEC</a> Academic History 2022.2.</h4>
 
 ## Dependencies 🚚:
 
@@ -112,7 +114,7 @@ I want to express my sincere gratitude for your invaluable guidance and support 
 
 ## Licence 📜:
 
-[Apache V2](https://choosealicense.com/licenses/apache-2.0/)
+All code done by **me** are in [Apache V2](https://choosealicense.com/licenses/apache-2.0/) license charge. They can distributed, used and shared as long as proper credit is given.
 
 ## References 📙:
 	
