@@ -11,24 +11,24 @@ Usage:
 
 section .data
 
-str0   db  "Enter an integer: ",10,0 ; Prompt for entering an integer
-str1   db  "Enter another integer: ",10,0 ; Prompt for entering another integer
-str2   db  "The sum of the values is %d",10,0 ; Output message for the sum
+    str0   db  "Enter an integer: ",10,0 ; Prompt for entering an integer
+    str1   db  "Enter another integer: ",10,0 ; Prompt for entering another integer
+    str2   db  "The sum of the values is %d",10,0 ; Output message for the sum
 
-fmt  db  "%d" ; Format specifier for scanf and printf
+    fmt  db  "%d" ; Format specifier for scanf and printf
 
-n1   dd 0 ; First number
-n2   dd 0 ; Second number
+    n1   dd 0 ; First number
+    n2   dd 0 ; Second number
 
 section .bss
 
-res resb 1 ; Result of the sum
+    res resb 1 ; Result of the sum
 
 section .text
     global main
     extern printf, scanf
     
-    main:
+main:
     push    rbp
     mov     rbp, rsp
 
