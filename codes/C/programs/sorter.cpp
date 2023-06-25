@@ -1,3 +1,13 @@
+/*
+File:           sorter.cpp
+Last changed:   25/06/20 16:05
+Purpose:        sorter idiot implementation hehe
+Authors:        Fernando Antonio Marques Schettini
+Usage: 
+	HowToCompile:   gcc sorter.cpp -o sorter
+	HowToExecute:   ./sorter  
+*/
+
 #include <stdio.h>
 #include <time.h>
 #include <stdlib.h>

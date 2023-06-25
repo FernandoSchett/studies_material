@@ -121,6 +121,12 @@ All code done by **me** are in [Apache V2](https://choosealicense.com/licenses/a
 
 ### Important Links 🔗:
 
+### OS:
+
+- https://youtu.be/CCHZ_06DoEA
+- https://youtu.be/_J4CVHgXQ1c
+- https://youtu.be/IE9EVxy8Ups
+
 ### Basic Software Development:
 
 - https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/
