@@ -102,7 +102,6 @@ For installing some tools more quickly, you can run the following command at ter
 
 Feel free to create a new branch, fork the project, create a new Issue or make a pull request contact one of us to develop at this studies repository. 
 
-
 ## Special thanks to 🥰:
 
 I want to express my sincere gratitude for your invaluable guidance and support throughout my career. Your mentorship has been instrumental in my professional growth, and I am truly grateful for the knowledge and insights you have shared. Thank you for believing in me and helping me succeed.
@@ -122,14 +121,13 @@ All code done by **me** are in [Apache V2](https://choosealicense.com/licenses/a
 
 ### Important Links 🔗:
 
-### Desing:
-
-- https://color.adobe.com/pt/create
-
-### O.S:
+### Basic Software Development:
 
 - https://blog.rchapman.org/posts/Linux_System_Call_Table_for_x86_64/
+- https://docs.oracle.com/cd/E19120-01/open.solaris/817-5477/eojde/index.html
 
-### Desing:
+### Others:
+
+- https://color.adobe.com/pt/create
 - https://choosealicense.com/
 
