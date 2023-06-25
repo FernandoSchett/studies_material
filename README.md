@@ -116,7 +116,9 @@ All code done by **me** are in [Apache V2](https://choosealicense.com/licenses/a
 ## References 📙:
 
 [1] HOPCROFT, John E.; MOTWANI, Rajeev; ULLMAN, Jeffrey D. Introduction to Automata Theory, Languages, and Computation. 3rd ed. Boston: Pearson, 2006.
+
 [2] TANENBAUM, Andrew S.; AUSTIN, Todd. Structured Computer Organization. 6th ed. Prentice Hall, 2012.
+
 [3] TANENBAUM, Andrew S.; BOS, Herbert. Sistemas Operacionais Modernos. 4th ed. Pearson, 2016.
 
 ### Important Links 🔗:
