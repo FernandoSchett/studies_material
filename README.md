@@ -22,7 +22,6 @@ In addition to my study materials, I also maintain another [repository](https://
 
 Feel free to explore the contents of this repository and utilize any resources that may be helpful to you. Whether you're a fellow student, a programmer, or simply curious about the world of computer science, I hope you find value in the materials I've gathered.
 
-
 ## Resourses 🧑‍🔬:
 
 - Useful Links: A curated collection of links to websites, blogs, forums, and online resources related to programming and computer science. These links serve as valuable references and sources of information for various topics.
@@ -60,7 +59,6 @@ Feel free to explore the contents of this repository and utilize any resources t
 The project dependencies are described in a dependencies file within the repository. In summary, heres what you're gonna need in order to run the project:
 
 - none yet :p
-- 
 
 For installing dependencies more quickly, you can run the following command at terminal, inside the clonned repository:
 
@@ -116,8 +114,10 @@ I want to express my sincere gratitude for your invaluable guidance and support 
 All code done by **me** are in [Apache V2](https://choosealicense.com/licenses/apache-2.0/) license charge. They can distributed, used and shared as long as proper credit is given.
 
 ## References 📙:
-	
-[1] none yet :p
+
+[1] HOPCROFT, John E.; MOTWANI, Rajeev; ULLMAN, Jeffrey D. Introduction to Automata Theory, Languages, and Computation. 3rd ed. Boston: Pearson, 2006.
+[2] TANENBAUM, Andrew S.; AUSTIN, Todd. Structured Computer Organization. 6th ed. Prentice Hall, 2012.
+[3] TANENBAUM, Andrew S.; BOS, Herbert. Sistemas Operacionais Modernos. 4th ed. Pearson, 2016.
 
 ### Important Links 🔗:
 
@@ -136,4 +136,3 @@ All code done by **me** are in [Apache V2](https://choosealicense.com/licenses/a
 
 - https://color.adobe.com/pt/create
 - https://choosealicense.com/
-
