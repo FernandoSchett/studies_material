@@ -71,12 +71,12 @@ Make sure you have the dependencies required before running the any codes in her
 First, clone this repository. In the top of each code file, has a manual with instructions for compiling, running, it's porpouse and other information. They usually look like the template below:
 
 	/*
-	File:           filne_name.ext
+	File:           file_name.ext
 	Last changed:   xx/xx/20xx xx:xx
 	Purpose:        Code for hard problems         
-	Authors:        Fernando Antônio Marques Schettini   
+	Authors:        Fernando Antonio Marques Schettini   
 	Usage: 
-		HowToCompile:   gcc filne_name.cpp -o file_name
+		HowToCompile:   gcc file_name.cpp -o file_name
 		HowToExecute:   ./file_name           
 	*/ 
 
