@@ -1,5 +1,0 @@
-/home/fernando/Documents/github/cv_studies/1_introduction_openCV_filters/build/CMakeFiles/check_version.dir
-/home/fernando/Documents/github/cv_studies/1_introduction_openCV_filters/build/CMakeFiles/data_input_output.dir
-/home/fernando/Documents/github/cv_studies/1_introduction_openCV_filters/build/CMakeFiles/color_remaping.dir
-/home/fernando/Documents/github/cv_studies/1_introduction_openCV_filters/build/CMakeFiles/edit_cache.dir
-/home/fernando/Documents/github/cv_studies/1_introduction_openCV_filters/build/CMakeFiles/rebuild_cache.dir

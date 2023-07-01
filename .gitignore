@@ -38,3 +38,10 @@ Thumbs.db
 .ipynb_checkpoints/
 *.ipynb
 
+# CMake generated files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+CMakeScripts/
+Makefile
+
