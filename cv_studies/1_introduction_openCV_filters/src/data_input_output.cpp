@@ -19,10 +19,10 @@ int main(int argc, char** argv){
         "{image_file|../samples/orange_cat.jpg|Path to the image file}");
 
 
-    if (parser.has("help"))	{
-	    parser.printMessage();
-	    return 0;
-	}
+    //if (parser.has("help"))	{
+	//    parser.printMessage();
+	//    return 0;
+	//}
 
     if (!parser.check())
 	{
