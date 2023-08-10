@@ -1,3 +1,12 @@
+"""
+File:           bisection.py
+Last changed:   10/08/2023 10:33
+Purpose:        find aprox. root in a interval [a,b]         
+Authors:        Fernando Antonio Marques Schettini   
+Usage: 
+	HowToExecute:   python3 bisection.py           
+"""
+
 import math 
 
 def f(x):
