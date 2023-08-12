@@ -22,7 +22,7 @@ def bis_info(c,c_1,iter):
     print(f'Root value: {c} f(c)= {f(c)}')
     print('###############################################')
     
-def bissection(a, b, tol, max_iter):
+def bissection(a, b, tol=1e-6, max_iter=100):
     # bolzano, if f(a) . f(b) < 0, there's a root [a,b]
     if f(a) * f(b) >= 0:
         raise ValueError("There's no root in this interval.")
