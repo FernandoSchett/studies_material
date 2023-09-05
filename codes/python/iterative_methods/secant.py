@@ -31,7 +31,6 @@ def secant_method(x, x_1, tol=1e-6, max_iter=100):
     c = 0 
     
     while iter_count < max_iter:
-        print(x, x_1)
         c_1 = c
         c = abs(((x*f(x_1)) - (x_1*f(x))) / (f(x_1)-f(x)) )
         sec_info(c, c_1, iter_count)
