@@ -1,3 +1,12 @@
+"""
+File:           root_finder.py
+Last changed:   04/09/2023 22:40
+Purpose:        class with various methods to find aprox. root         
+Authors:        Fernando Antonio Marques Schettini   
+Usage: 
+	HowToExecute:   python3 root_finder.py           
+"""
+
 import math 
 
 class Rootfinder:
