@@ -11,11 +11,11 @@ import numpy as np
 
 class System_solver:
     
-    def __init__(self, coef, indep, jacob=False, flag=False):
+    def __init__(self, coef=None, indep=None, jacob=False, flag=False):
         self.coef = coef
         self.indep = indep
         self.jacob = jacob
-        self.flag = False
+        self.flag = flag
 
     def show_info(self, x_new, x, iter):
         if self.flag == True:
@@ -33,12 +33,6 @@ class System_solver:
     def jacobi(self, x0, max_iter=100, tol=1e-6):
         n = len(self.coef)
         x = x0.copy()
-        
-        # Checking convergence
-        for i in range(n):
-            sigma = sum(abs(self.coef[i][j]) for j in range(n) if j != i)
-            if self.coef[i][i] < abs(sigma):
-                return None
 
         for iter in range(max_iter):
             x_new = x.copy()
@@ -60,12 +54,6 @@ class System_solver:
     def gauss_seidel(self, x0, max_iter=100, tol=1e-6):
         n = len(self.coef)
         x = x0.copy()
-        
-        # Checking convergence
-        for i in range(n):
-            sigma = sum(abs(self.coef[i][j]) for j in range(n) if j != i)
-            if self.coef[i][i] < abs(sigma):
-                return None
 
         for iter in range(max_iter):
             x_new = x.copy()
@@ -84,8 +72,33 @@ class System_solver:
             self.show_info(x_new, x, iter)
             x = x_new
         return x
+    
+    def get_coef(self):
+        return self.coef
+    
+    def get_indep(self):
+        return self.indep
+    
+    def get_jacob(self):
+        return self.jacob
+    
+    def get_flag(self):
+        return self.flag
+    
+    def set_coef(self, coef):
+        self.coef = coef
+    
+    def set_indep(self, indep):
+        self.indep = indep
+    
+    def set_jacob(self, jacob):
+        self.jacob = jacob
+    
+    def set_flag(self, flag):
+        self.flag = flag
 
 if __name__ == "__main__":
+
     coef = [[10, -1, 2, 0],
             [-1, 11, -1, 3],
             [2, -1, 10, -1],

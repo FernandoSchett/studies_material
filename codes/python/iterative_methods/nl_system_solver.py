@@ -8,6 +8,7 @@ Usage:
 """
 
 import numpy as np
+from system_solver import System_solver
 
 class NL_system_solver:
     
@@ -15,6 +16,7 @@ class NL_system_solver:
         self.func = func
         self.jacob = jacob
         self.flag = flag
+        self.solver = None
 
     def show_info(self, x_new, x, iter):
         if self.flag == True:
@@ -31,22 +33,37 @@ class NL_system_solver:
         
     def newton_system(self, x0, tol=1e-6, max_iter=100):
         x = np.array(x0, dtype=float)
+        self.solver = System_solver(None, None, flag=self.flag)
+
         for iter in range(max_iter):
-            F = self.func(x)
-            J = self.jacob(x)
-            delta_x = np.linalg.solve(J, -F)
-            self.show_info(x + delta_x, x, iter)
-            x += delta_x
-            if np.linalg.norm(delta_x, np.inf) < tol:
-                return x
-        return x
+            self.solver.set_coef(self.jacob(x).tolist())
+            self.solver.set_indep((-1*self.func(x)).tolist())
+
+            guess = [0] * len(self.solver.get_coef())
+            delta_x = self.solver.gauss_seidel(guess)
+            x_new = x  + delta_x
+            self.show_info(x_new, x, iter)
+
+            # Checking stop criteria
+            errors = [abs(x_new[i] - x[i]) for i in range(len(x))]
+            if all(error < tol for error in errors):
+                return x_new
+            x = x_new
+        return x_new
     
 if __name__ == "__main__":
-    def func(x):
-        return np.array([x[0]**2 + x[1]**2 - 1, x[0] + x[1] - 2])
+    
+    def func(var):
+        eq1 = var[0]**2 + var[1] - 5
+        eq2 = var[0]**2 + var[1]**2 - 7
+        return np.array([eq1, eq2])
 
-    def jacob(x):
-        return np.array([[2 * x[0], 2 * x[1]], [1, 1]])
+    def jacob(var):
+        jac = np.array([
+            [2 * var[0], 1],
+            [2 * var[0], 2 * var[1]]
+        ])
+        return jac
 
     solver = NL_system_solver(func, jacob) 
     initial_guess = [0.5, 1.5]
