@@ -4,7 +4,10 @@ Last changed:   05/09/2023 11:18
 Purpose:        class with various methods to solve systems of NON linear equations.       
 Authors:        Fernando Antonio Marques Schettini   
 Usage: 
-	HowToExecute:   python3 nl_system_solver.py           
+	HowToExecute:   python3 nl_system_solver.py     
+Dependecies:
+    numpy
+    system_solver.py
 """
 
 import numpy as np
