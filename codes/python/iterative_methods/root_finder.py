@@ -16,7 +16,7 @@ class Rootfinder:
         self.df = df
         self.flag = False
 
-    def info(self, c, c_1, iter):
+    def show_info(self, c, c_1, iter):
         if self.flag == True:
             abs_error = abs(c - c_1)
             rel_error = abs(c - c_1) / abs(c) 
@@ -39,7 +39,7 @@ class Rootfinder:
         while (b - a) > tol and iter < max_iter:
             c_1 = c
             c = (a + b) / 2
-            self.info(c,c_1,iter)
+            self.show_info(c,c_1,iter)
 
             if self.f(c) == 0:
                 return c
@@ -62,7 +62,7 @@ class Rootfinder:
         while iter_count < max_iter:
             c_1 = c
             c = abs(((x*f(x_1)) - (x_1*f(x))) / (f(x_1)-f(x)) )
-            self.info(c, c_1, iter_count)
+            self.show_info(c, c_1, iter_count)
 
             if abs(self.f(c)) < tol or c == 0:
                 return c
@@ -83,7 +83,7 @@ class Rootfinder:
             if self.df(x) == 0:
                 raise ValueError(f"Derivative is 0 at {x}.")
             x_1 = x - self.f(x) / self.df(x)
-            self.nf_info(x, x_1, i)
+            self.nf_show_info(x, x_1, i)
             if abs(self.f(x)) < tol:
                 return x
             x = x_1
@@ -121,4 +121,3 @@ if __name__ == "__main__":
     print("Newton-Raphson Method:")
     root_newton = root_finder.newton_raphson(initial_guess, tol, max_iter)
     print(f"Root found: {root_newton}")
-
