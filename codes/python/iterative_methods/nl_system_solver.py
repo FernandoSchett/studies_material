@@ -36,7 +36,7 @@ class NL_system_solver:
         
     def newton_system(self, x0, tol=1e-6, max_iter=100):
         x = np.array(x0, dtype=float)
-        self.solver = System_solver(None, None, flag=self.flag)
+        self.solver = System_solver(None, None)
 
         for iter in range(max_iter):
             self.solver.set_coef(self.jacob(x).tolist())
