@@ -19,7 +19,7 @@ class NL_system_solver:
         self.func = func
         self.jacob = jacob
         self.flag = flag
-        self.solver = None
+        self.solver = flag
 
     def show_info(self, x_new, x, iter):
         if self.flag == True:
