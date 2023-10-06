@@ -11,11 +11,10 @@ import numpy as np
 
 class Regression:
 
-    def __init__(self, x, y, flag=False):
+    def __init__(self, x, y):
         self.x = x
         self.y = y
         self.equation = None
-        self.flag = flag 
 
     def gen_coef(self, order):
         coef = []
@@ -34,6 +33,8 @@ class Regression:
         self.equation = np.poly1d(eq_coef[::-1])
 
     def predict(self, val):
+        if self.equation is None:
+            raise ValueError("Você precisa ajustar o modelo primeiro")
         return self.equation(val)
 
     def rsquare(self):
@@ -80,20 +81,14 @@ class Regression:
     def get_x(self):
         return self.x
 
-    def set_x(self, novo_x):
-        self.x = novo_x
+    def set_x(self, x):
+        self.x = x
 
     def get_y(self):
         return self.y
 
-    def set_y(self, novo_y):
-        self.y = novo_y
-
-    def get_flag(self):
-        return self.flag
-
-    def set_flag(self, nova_flag):
-        self.flag = nova_flag
+    def set_y(self, y):
+        self.y = y
 
     def get_equation(self):
         return self.equation
