@@ -54,9 +54,17 @@ class Regression:
         if self.equation is None:
             raise ValueError("Você precisa ajustar o modelo primeiro")
 
-        y_pred = self.equation(self.x)
-        corr_matrix = np.corrcoef(self.y, y_pred)
-        correlation = corr_matrix[0, 1]
+        # Calcular a média de x e y
+        mean_x = sum(self.x) / len(self.x)
+        mean_y = sum(self.y) / len(self.y)
+
+        # Calcular os termos necessários para o coeficiente de correlação de Pearson
+        numerator = sum((x - mean_x) * (y - mean_y) for x, y in zip(self.x, self.y))
+        denominator_x = sum((x - mean_x) ** 2 for x in self.x)
+        denominator_y = sum((y - mean_y) ** 2 for y in self.y)
+
+        # Calcular o coeficiente de correlação de Pearson
+        correlation = numerator / (denominator_x ** 0.5 * denominator_y ** 0.5)
 
         return correlation
 
@@ -64,9 +72,9 @@ class Regression:
         x_range = np.linspace(min(self.x), max(self.x), 100)
         y_fit = self.equation(x_range)
 
-        plt.scatter(self.x, self.y, label="Dados")
-        plt.plot(x_range, y_fit, color='orange', label="Equação Ajustada")
-        plt.title(f"Pearson: {self.pearson()}, R²: {self.rsquare()}, Equação: {self.get_equation()}")
+        plt.scatter(self.x, self.y, label="Data")
+        plt.plot(x_range, y_fit, color='orange', label="Adjusted Equation")
+        plt.title(f"Pearson: {self.pearson()}, R²: {self.rsquare()}, Equation: {self.get_equation()}")
         plt.legend()
         plt.xlabel("X")
         plt.ylabel("Y")
