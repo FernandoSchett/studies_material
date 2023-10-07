@@ -6,6 +6,7 @@ Authors:        Fernando Antonio Marques Schettini
 Usage: 
 	HowToExecute:   python3 regression.py           
 """
+
 import matplotlib.pyplot as plt
 import numpy as np
 
@@ -16,6 +17,10 @@ class Regression:
         self.y = y
         self.equation = None
 
+    def eq_adjust():
+
+        return
+    
     def gen_coef(self, order):
         coef = []
         indep = []
@@ -29,8 +34,13 @@ class Regression:
 
     def fit(self, order):
         coef, indep = self.gen_coef(order)
-        eq_coef = np.linalg.solve(coef, indep)     
+        eq_coef = np.linalg.solve(coef, indep) 
         self.equation = np.poly1d(eq_coef[::-1])
+
+    def exp_fit(self):
+        coef, indep = self.gen_coef(1)
+        eq_coef = np.linalg.solve(coef, indep)
+        self.equation = lambda x: np.exp(eq_coef[0])+np.exp(eq_coef[0]*x)
 
     def predict(self, val):
         if self.equation is None:
@@ -109,8 +119,17 @@ if __name__ == "__main__":
     regression_model = Regression(x, y)
     
     # Fit the model with a polynomial of order 2
-    regression_model.fit(2)
+    regression_model.fit(1)
     
     # Visualize the results
     regression_model.visualize()
     regression_model.demo(3)
+
+    x = np.array([1981, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990])
+    y = np.array([69, 76, 81, 90, 94, 100, 103, 108, 113, 115])
+    
+    regression_model.set_x(x)
+    regression_model.set_y(y)
+    
+    regression_model.exp_fit()
+    regression_model.visualize()
