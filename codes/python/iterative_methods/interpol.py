@@ -1,48 +1,84 @@
 """
-File: interpol.py
-Last changed: 23/10/2023 18:53
-Purpose: class to predict values by interpolation
-Authors: Fernando Antonio Marques Schettini
-Usage:
-HowToExecute: python3 interpol.py
+File:           interpol.py
+Last changed:   05/09/2023 19:49 
+Purpose:        class with various methods to interpolate dots.       
+Authors:        Fernando Antonio Marques Schettini   
+Usage: 
+	HowToExecute:   python3 interpol.py     
+Dependecies:
+    numpy
 """
-
-import matplotlib.pyplot as plt
 import numpy as np
 
 class Interpolate:
 
-    def __init__(self, x, y):
+    def __init__(self, x, y, equation=None, flag=False):
         self.x = x
         self.y = y
+        self.equation = equation
+        self.flag = flag
 
-    def lagrange(self, value):
+    def lagrange_fit(self):
         data = self.get_x()
         n = len(data)
-        result = 0.0
+        poly = [0.0] * (n)
 
         for i in range(n):
             term = self.get_y()[i]
             for j in range(n):
                 if i != j:
-                    term *= (value - data[j]) / (data[i] - data[j])
-            result += term
-        return result
+                    term *= np.poly1d([1, -data[j]]) / (data[i] - data[j])
+            poly += term
+        self.equation = poly
+        self.get_info()
 
-    def newton(self, value):
+    def newton_fit(self):
         data = self.get_x()
         n = len(data)
         y = self.get_y()
-        result = 0.0
+        poly = np.poly1d(0.0)
 
         for i in range(n):
             term = y[i]
             for j in range(i):
-                term *= (value - data[j])
-            result += term
-        return result
+                term *= np.poly1d([1, -data[j]])
+            poly += term
+        self.equation = poly
+        self.get_info()
+    
+    def gregory_newton_fit(self):
+        data = self.get_x()
+        n = len(data)
+        y = self.get_y()
+        diff_table = np.zeros((n, n), dtype=float)
 
-    # Getters and setters for 'x', 'y', and 'equation'
+        for i in range(n):
+            diff_table[i][0] = y[i]
+
+        for j in range(1, n):
+            for i in range(n - j):
+                diff_table[i][j] = (diff_table[i + 1][j - 1] - diff_table[i][j - 1]) / (data[i + j] - data[i])
+
+        poly = np.poly1d(diff_table[0, 0])
+        for j in range(1, n):
+            factors = np.poly1d([1])
+            for i in range(j):
+                factors *= np.poly1d([1, -data[i]])
+            poly += diff_table[0, j] * factors
+
+        self.equation = poly
+        self.get_info()
+
+    def predict(self, value):
+        return self.equation(value)
+    
+    def get_info(self):
+        if self.flag == True:
+            print("================")
+            print(f"Equation:{self.equation}")
+            print("================")
+
+    # Getters and setters for 'x', 'y'
     def get_x(self):
         return self.x
 
@@ -56,15 +92,18 @@ class Interpolate:
         self.y = y
 
 if __name__ == "__main__":
+    
     x_data = [1, 2, 3, 4]
     y_data = [2, 4, 8, 16]
+    value = 2.5
 
-    interpolator = Interpolate(x_data, y_data)
+    interpolator = Interpolate(x_data, y_data, flag=True)
 
-    # Lagrange
-    lagrange_result = interpolator.lagrange(2.5)
-    print(f"Lagrange interpolation at x=2.5: {lagrange_result}")
-
-    # Newton
-    newton_result = interpolator.newton(2.5)
-    print(f"Newton interpolation at x=2.5: {newton_result}")
+    interpolator.lagrange_fit()
+    print("Lagrange interpolation:", interpolator.predict(2.5))
+    
+    interpolator.newton_fit()
+    print("Newton interpolation:", interpolator.predict(2.5))
+    
+    interpolator.gregory_newton_fit()
+    print("Gregory-Newton interpolation:", interpolator.predict(2.5))
