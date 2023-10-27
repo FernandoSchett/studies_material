@@ -2,7 +2,7 @@
 File:           interpol.py
 Last changed:   05/09/2023 19:49 
 Purpose:        class with various methods to interpolate dots.       
-Authors:        Fernando Antonio Marques Schettini   
+Authors:        Fernando Antonio Marques Schettini  and @pedrobarros01  
 Usage: 
 	HowToExecute:   python3 interpol.py     
 Dependecies:
@@ -25,7 +25,6 @@ class Interpolate:
         data = self.get_x()
         n = len(data)
         poly = [0.0] * (n)
-
         for i in range(n):
             term = self.get_y()[i]
             for j in range(n):
@@ -34,30 +33,31 @@ class Interpolate:
             poly += term
         self.equation = poly
         self.get_info()
-
+    
     def newton_fit(self):
-        data = self.get_x()
-        n = len(data)
+        x = self.get_x()
         y = self.get_y()
-        diff_table = np.zeros((n, n), dtype=float)
+        n = len(x)
+        f = [[0] * n for _ in range(n)]
 
         for i in range(n):
-            diff_table[i][0] = y[i]
+            f[i][0] = y[i]
 
         for j in range(1, n):
             for i in range(n - j):
-                diff_table[i][j] = (diff_table[i + 1][j - 1] - diff_table[i][j - 1]) / (data[i + j] - data[i])
+                f[i][j] = (f[i + 1][j - 1] - f[i][j - 1]) / (x[i + j] - x[i])
 
-        poly = np.poly1d(diff_table[0, 0])
-        for j in range(1, n):
-            factors = np.poly1d([1])
-            for i in range(j):
-                factors *= np.poly1d([1, -data[i]])
-            poly += diff_table[0, j] * factors
+        self.equation = lambda valor: sum(
+            f[0][i] * self.multiply_terms(valor, x, i)
+            for i in range(n)
+        )
 
-        self.equation = poly
-        self.get_info()
-    
+    def multiply_terms(self, valor, x, i):
+        term = 1
+        for k in range(i):
+            term *= (valor - x[k])
+        return term
+
     def gregory_newton_fit(self):
         data = self.get_x()
         n = len(data)
