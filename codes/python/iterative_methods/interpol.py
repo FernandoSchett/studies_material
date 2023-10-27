@@ -7,7 +7,10 @@ Usage:
 	HowToExecute:   python3 interpol.py     
 Dependecies:
     numpy
+    matplotib
 """
+
+import matplotlib.pyplot as plt
 import numpy as np
 
 class Interpolate:
@@ -36,13 +39,22 @@ class Interpolate:
         data = self.get_x()
         n = len(data)
         y = self.get_y()
-        poly = np.poly1d(0.0)
+        diff_table = np.zeros((n, n), dtype=float)
 
         for i in range(n):
-            term = y[i]
-            for j in range(i):
-                term *= np.poly1d([1, -data[j]])
-            poly += term
+            diff_table[i][0] = y[i]
+
+        for j in range(1, n):
+            for i in range(n - j):
+                diff_table[i][j] = (diff_table[i + 1][j - 1] - diff_table[i][j - 1]) / (data[i + j] - data[i])
+
+        poly = np.poly1d(diff_table[0, 0])
+        for j in range(1, n):
+            factors = np.poly1d([1])
+            for i in range(j):
+                factors *= np.poly1d([1, -data[i]])
+            poly += diff_table[0, j] * factors
+
         self.equation = poly
         self.get_info()
     
@@ -78,6 +90,17 @@ class Interpolate:
             print(f"Equation:{self.equation}")
             print("================")
 
+    def visualize(self):
+        x_range = np.linspace(min(self.get_x()), max(self.get_x()), 100)
+        y_fit = self.equation(x_range)
+        plt.scatter(self.get_x(), self.get_y(), label="Data")
+        plt.plot(x_range, y_fit, color='orange', label="Adjusted Equation")
+        plt.title(f"Equation: {self.equation}")
+        plt.legend()
+        plt.xlabel("X")
+        plt.ylabel("Y")
+        plt.show()
+    
     # Getters and setters for 'x', 'y'
     def get_x(self):
         return self.x
@@ -93,17 +116,20 @@ class Interpolate:
 
 if __name__ == "__main__":
     
-    x_data = [1, 2, 3, 4]
-    y_data = [2, 4, 8, 16]
-    value = 2.5
+    x_data = [0, 10, 20]
+    y_data = [0, 6, 4]
+    value = 5
 
     interpolator = Interpolate(x_data, y_data, flag=True)
 
     interpolator.lagrange_fit()
-    print("Lagrange interpolation:", interpolator.predict(2.5))
-    
+    print("Lagrange interpolation:", interpolator.predict(value))
+    interpolator.visualize()
+
     interpolator.newton_fit()
-    print("Newton interpolation:", interpolator.predict(2.5))
-    
+    print("Newton interpolation:", interpolator.predict(value))
+    interpolator.visualize()
+
     interpolator.gregory_newton_fit()
-    print("Gregory-Newton interpolation:", interpolator.predict(2.5))
+    print("Gregory-Newton interpolation:", interpolator.predict(value))
+    interpolator.visualize()
